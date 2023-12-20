@@ -1,0 +1,43 @@
+.section--title {
+    text-align: center;
+    @include text($font-size-46,
+        $line-height-no,
+        $letter-spacing-no,
+        900,
+        $font-noto-serif,
+        $color-black);
+}
+
+
+.a-link {
+    &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url(../images/link-icon.png) 0 0 no-repeat;
+        background-size: 100% 100%;
+        margin-left: 10px;
+    }
+}
+
+
+@include mq(w-768) {
+
+    .section--title {
+        @include text($font-size-36,
+            $line-height-sm,
+            $letter-spacing-1,
+            900,
+            $font-noto-serif,
+            $color-black);
+    }
+
+    .a-link {
+        &::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
