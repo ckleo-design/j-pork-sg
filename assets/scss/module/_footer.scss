@@ -1,0 +1,65 @@
+footer {
+    .footer__banner {
+        width: 100%;
+        padding: 120px 0 80px;
+        background-color: $color-red;
+
+        &__title {
+            @include text($font-size-26,
+                $line-height-no, $letter-spacing-no, 700, $font-Poppins, $color-white);
+            text-align: center;
+        }
+
+        &__logo {
+            width: 346px;
+            height: auto;
+            margin: 36px auto;
+        }
+
+        &__link {
+            display: block;
+            margin: 0 auto;
+            width: fit-content;
+            padding: 10px 70px 12px;
+            background-color: $color-gold;
+            border-radius: 26px;
+            @include text($font-size-18,
+                $line-height-no, $letter-spacing-no, 600, $font-Poppins, $color-black);
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+
+    .footer__copy {
+        width: 100%;
+        padding: 34px 0;
+        background-color: #333333;
+        @include text($font-size-14,
+            $line-height-no, $letter-spacing-no, 400, $font-Poppins, $color-white);
+        text-align: center;
+    }
+}
+
+@include mq(w-768) {
+    footer {
+        .footer__banner {
+            padding: 80px 0 40px;
+            background-color: $color-gold;
+
+
+            &__logo {
+
+                width: 300px;
+            }
+        }
+
+        .footer__copy {
+            width: 100%;
+            padding: 34px 20px;
+            background-color: #333333;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+}

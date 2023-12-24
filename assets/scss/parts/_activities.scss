@@ -1,0 +1,233 @@
+.activities {
+    padding: 100px 0 120px;
+    background-color: $color-red;
+    position: relative;
+
+    &::before {
+        content: "";
+        max-width: 270px;
+        width: 18.75vw;
+        height: 174px;
+        display: block;
+        position: absolute;
+        top: -30px;
+        left: 30px;
+        background: url(../images/flower-img1.png) 0 0 no-repeat;
+        background-size: 100% auto;
+    }
+
+    &::after {
+        content: "";
+        max-width: 270px;
+        width: 18.75vw;
+        height: 174px;
+        display: block;
+        position: absolute;
+        bottom: -100px;
+        right: 30px;
+        background: url(../images/flower-img2.png) 0 0 no-repeat;
+        background-size: 100% auto;
+    }
+
+    &__title {
+        color: $color-white;
+    }
+
+    &__date {
+        margin: 30px auto 70px;
+        display: block;
+        padding: 10px 50px;
+        width: fit-content;
+        background-color: #fff;
+        border-radius: 40px;
+        @include text(42px,
+            $line-height-no,
+            $letter-spacing-no,
+            600,
+            $font-Cinzel,
+            $color-red);
+        text-align: center;
+
+    }
+
+    &__inner {
+        @include display-1280;
+        margin-top: 80px;
+        padding-top: 80px;
+        padding-bottom: 70px;
+        background-color: $color-whiteBG;
+        border-radius: 33px;
+
+        .yakiniku-like {
+
+            &__logo {
+                width: 222px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            &__link {
+                margin-top: 30px;
+                margin-left: 30px;
+                display: block;
+                @include text($font-size-18,
+                    $line-height-no, $letter-spacing-no, 600, $font-Amiko, #0071BB);
+                text-align: center;
+            }
+
+            &__inner {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                &__block {
+                    margin-top: 40px;
+                    width: 100%;
+
+                    &:not(:first-child) {
+                        width: 48.6%;
+                    }
+
+                    &__img {
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+
+                    &__caption {
+                        margin-top: 16px;
+                        @include text($font-size-14,
+                            $line-height-no, $letter-spacing-no, 400, $font-Poppins, $color-black);
+                    }
+
+                    &__title {
+                        @include text(28px,
+                            32px, $letter-spacing-no, 700, $font-Cinzel, $color-black);
+                    }
+
+                    &__detail {
+                        @include text(17px,
+                            28px, $letter-spacing-no, 500, $font-Poppins, $color-black);
+                        margin-bottom: 6px;
+                    }
+
+                    &__price {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-bottom: 6px;
+
+                        &__item {
+                            width: 22%;
+                            padding: 3px 0;
+                            background-color: $color-black;
+                            text-align: center;
+                            @include text(18px,
+                                100%, $letter-spacing-no, 600, $font-Poppins, $color-white);
+                        }
+
+                        &__cost {
+                            width: 76%;
+                            @include text(25px,
+                                100%,
+                                $letter-spacing-no,
+                                700,
+                                $font-Poppins,
+                                #E53323);
+
+                            span {
+                                margin-left: 4px;
+                                @include text(18px,
+                                    100%, $letter-spacing-no, 400, $font-Poppins, $color-black);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mq(w-768) {
+    .activities {
+        &::before {
+            content: "";
+            max-width: 270px;
+            width: 42vw;
+            height: 120px;
+            display: block;
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: url(../images/flower-img1.png) 0 0 no-repeat;
+            background-size: 100% auto;
+        }
+
+        &::after {
+            content: "";
+            max-width: 270px;
+            width: 42vw;
+            height: 120px;
+            display: block;
+            position: absolute;
+            bottom: -60px;
+            right: 6px;
+            background: url(../images/flower-img2.png) 0 0 no-repeat;
+            background-size: 100% auto;
+        }
+
+
+        &__date {
+            padding: 10px 20px;
+            width: 90%;
+            font-size: 22px;
+        }
+
+        &__inner {
+            @include display-100sp;
+            width: 94%;
+            padding-top: 50px;
+            padding-bottom: 40px;
+            background-color: $color-whiteBG;
+            border-radius: 33px;
+
+            .yakiniku-like {
+
+                &__logo {
+                    width: 80%;
+                    max-width: 222px;
+                }
+
+                &__link {
+                    font-size: 22px;
+                }
+
+                &__inner {
+
+                    &__block {
+
+                        &:not(:first-child) {
+                            width: 100%;
+                        }
+
+                        &__img {
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+
+                        &:first-child img {
+                            aspect-ratio: 4/3;
+                            object-fit: cover;
+                            object-position: 14% 0%;
+                        }
+
+
+                        &__price {
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

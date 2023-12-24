@@ -1,0 +1,38 @@
+.section--title {
+    text-align: center;
+    @include text(58px,
+        $line-height-no,
+        $letter-spacing-no,
+        600,
+        $font-Cinzel,
+        $color-black);
+}
+
+
+.a-link {
+    &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url(../images/link-icon.png) 0 0 no-repeat;
+        background-size: 100% 100%;
+        margin-left: 10px;
+    }
+}
+
+
+@include mq(w-768) {
+
+    .section--title {
+        font-size: 36px;
+    }
+
+    .a-link {
+        &::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
