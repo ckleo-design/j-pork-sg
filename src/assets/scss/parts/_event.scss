@@ -70,7 +70,7 @@
 
             &__block {
                 width: 31.5%;
-                padding: 60px 33px;
+                padding: 40px 20px;
                 aspect-ratio: 1/1;
                 background-color: #e53323;
                 border-radius: 100%;
@@ -78,21 +78,22 @@
                 row-gap: 10px;
 
                 &__icon {
-                    width: 32%;
-                    aspect-ratio: 1/1;
-                    object-fit: contain
+                    height: 64px;
                 }
 
                 &__title {
-                    @include text(36px,
+                    @include text(32px,
                         100%, $letter-spacing-no, 700, $font-Poppins, $color-white);
                     text-align: center;
                 }
 
                 &__detail {
-                    @include text(20px,
-                        27px, $letter-spacing-no, 500, $font-Poppins, $color-white);
+                    @include text(18px,
+                        24px, $letter-spacing-no, 500, $font-Poppins, $color-white);
                     text-align: center;
+                    span{
+                        color: #FFCC00;
+                    }
                 }
             }
         }
@@ -122,7 +123,7 @@
                 @include text(22px,
                     100%,
                     $letter-spacing-no,
-                    500,
+                    600,
                     $font-Poppins,
                     #E53323);
                 text-align: center;
@@ -136,7 +137,7 @@
                 &-item {
                     margin-bottom: 14px;
                     @include text(16px,
-                        100%,
+                        120%,
                         $letter-spacing-no,
                         500,
                         $font-Poppins,
@@ -267,7 +268,20 @@
                     }
                 }
             }
-
+            &__menu{
+                margin-top: 30px;
+                &__image{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    &__block{
+                        width: 48.6%;
+                        &__content{
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
             &__chef {
                 margin-top: 40px;
                 @include display-flex(row, space-between, flex-end);
@@ -376,7 +390,7 @@
                 row-gap: 16px;
 
                 &__block {
-                    width: 80%;
+                    width: 100%;
                     padding: 30px 30px;
                     row-gap: 10px;
 
@@ -483,7 +497,18 @@
                         }
                     }
                 }
-
+                &__menu{
+                    &__image{
+flex-direction: column;
+                        justify-content: center;
+                        &__block{
+                            width: 100%;
+                            &:first-child{
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
                 &__chef {
                     @include display-flex(column, center, flex-start);
                     padding: 12px;
