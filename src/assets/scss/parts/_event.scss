@@ -21,7 +21,16 @@
         padding-bottom: 70px;
         background-color: $color-white;
         border-radius: 33px;
-
+        position: relative;
+            .promotion-ended {
+                display: block;
+                width: 200px;
+                height: auto;
+                aspect-ratio: 1/1;
+                position: absolute;
+                top: 2%;
+                left: 2%;
+            }
         &__title {
             display: block;
             width: fit-content;
@@ -379,7 +388,16 @@
             margin-top: 40px;
             padding-top: 40px;
             padding-bottom: 70px;
-
+                .promotion-ended {
+                    display: block;
+                    width: 30vw;
+                    max-width: 130px;
+                    height: auto;
+                    aspect-ratio: 1/1;
+                    position: absolute;
+                    top: -1%;
+                    left: 0%;
+                }
             &__title {
                 width: 86%;
                 padding: 6px 30px;

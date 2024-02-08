@@ -59,7 +59,7 @@
         border-radius: 33px;
 
         .yakiniku-like {
-
+            position: relative;
             &__logo {
                 width: 222px;
                 height: auto;
@@ -76,11 +76,19 @@
                 text-align: center;
             }
 
+            .promotion-ended {
+                display: block;
+                width: 200px;
+                height: auto;
+                aspect-ratio: 1/1;
+                position: absolute;
+                top: 7%;
+                left: 24%;
+            }
             &__inner {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
-
                 &__block {
                     margin-top: 40px;
                     width: 100%;
@@ -201,7 +209,16 @@
                 &__link {
                     font-size: 22px;
                 }
-
+                .promotion-ended {
+                    display: block;
+                    width: 30vw;
+                    max-width: 130px;
+                    height: auto;
+                    aspect-ratio: 1/1;
+                    position: absolute;
+                    top: 10%;
+                    left: 0%;
+                }
                 &__inner {
 
                     &__block {
