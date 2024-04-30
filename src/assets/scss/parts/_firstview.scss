@@ -1,5 +1,5 @@
 .firstview {
-    background: url(../images/fv-bg.png)50% 0 no-repeat;
+    background: url(../images/fv-bg.png) 50% 0 no-repeat;
     background-size: 100% auto;
     width: 100%;
     height: 466px;
@@ -19,7 +19,7 @@
         }
 
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             left: -190px;
@@ -34,7 +34,7 @@
 
 @include mq(w-768) {
     .firstview {
-        background: url(../images/fv-bg-sp.png)0 0 no-repeat;
+        background: url(../images/fv-bg-sp.png) 0 0 no-repeat;
         background-size: 100% auto;
         width: 100vw;
         height: 76vh;
@@ -42,13 +42,12 @@
         &__title {
             width: 90vw;
             max-width: 400px;
-            margin-top: 50px;
-
+            margin-top: 115px;
 
             &::before {
-                content: "";
+                content: '';
                 position: absolute;
-                top: 100%;
+                top: -140%;
                 left: 50%;
                 margin-left: -50px;
                 width: 100px;
